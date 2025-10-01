@@ -23,8 +23,9 @@
 &mt {
     quick-tap-ms = <QUICK_TAP_MS>;
     global-quick-tap;
-    flavor = "tap-preferred";
+    flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM_MS>;
+    quick-tap-ms = <TAPPING_TERM_MS>;
 };
 
 &lt {
@@ -32,44 +33,10 @@
     global-quick-tap;
     flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM_MS>;
-    quick-tap-ms = <200>;                   // Allows hold function when double-tapping
-    retro-tap;                              // Enables tap on release
+    quick-tap-ms = <TAPPING_TERM_MS>;
 };
 
 / {
-    behaviors {
-        mt: mod_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MOD_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <170>;
-            quick-tap-ms = <100>;
-            global-quick-tap;
-            bindings = <&kp>, <&kp>;
-        };
-
-        lt: layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LAYER_TAP";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <170>;
-            quick-tap-ms = <100>;
-            global-quick-tap;
-            bindings = <&mo>, <&kp>;
-        };
-
-        ctrl_bspc: ctrl_backspace {
-            compatible = "zmk,behavior-mod-morph";
-            label = "CTRL_BACKSPACE";
-            #binding-cells = <0>;
-            bindings = <&kp BSPC>, <&kp LC(BSPC)>;
-
-            mods = <(MOD_LCTL|MOD_RCTL)>;
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
@@ -99,8 +66,6 @@
 
     keymap {
         compatible = "zmk,keymap";
-
-        // ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
 
         base_layer {
             label = "BL";
