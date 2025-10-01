@@ -21,8 +21,8 @@
 #define _FL 2  // function layer
 #define _GL 3  // game layer
 
-#define QUICK_TAP_MS 100
-#define TAPPING_TERM_MS 170
+#define QUICK_TAP_MS 125
+#define TAPPING_TERM_MS 180
 
 &mt {
   quick-tap-ms = <QUICK_TAP_MS>;
@@ -34,8 +34,10 @@
 &lt {
   quick-tap-ms = <QUICK_TAP_MS>;
   global-quick-tap;
-  flavor = "tap-preferred";
+  flavor = "balanced";
   tapping-term-ms = <TAPPING_TERM_MS>;
+  quick-tap-ms = <200>;                   // Allows hold function when double-tapping
+  retro-tap;                              // Enables tap on release
 };
 
 / {
