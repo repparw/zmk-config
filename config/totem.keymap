@@ -17,23 +17,19 @@
 #define _NL 1  // num layer
 #define _FL 2  // function layer
 #define _GL 3  // game layer
-#define QUICK_TAP_MS 125
+#define QUICK_TAP_MS 225
 #define TAPPING_TERM_MS 180
 
 &mt {
     quick-tap-ms = <QUICK_TAP_MS>;
     global-quick-tap;
-    flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM_MS>;
-    quick-tap-ms = <TAPPING_TERM_MS>;
 };
 
 &lt {
     quick-tap-ms = <QUICK_TAP_MS>;
     global-quick-tap;
-    flavor = "balanced";
     tapping-term-ms = <TAPPING_TERM_MS>;
-    quick-tap-ms = <TAPPING_TERM_MS>;
 };
 
 / {
