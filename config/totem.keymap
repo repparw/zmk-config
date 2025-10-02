@@ -21,15 +21,18 @@
 #define TAPPING_TERM_MS 180
 
 &mt {
-    quick-tap-ms = <QUICK_TAP_MS>;
-    global-quick-tap;
-    tapping-term-ms = <TAPPING_TERM_MS>;
+    quick-tap-ms = <175>;
+    tapping-term-ms = <280>;
+    require-prior-idle-ms = <150>;
+    hold-trigger-on-release;
+    hold-trigger-key-positions = <>;
+    flavor = "balanced";
 };
 
 &lt {
     quick-tap-ms = <QUICK_TAP_MS>;
-    global-quick-tap;
     tapping-term-ms = <TAPPING_TERM_MS>;
+    flavor = "balanced";
 };
 
 / {
